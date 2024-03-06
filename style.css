@@ -9,13 +9,13 @@
 
 /* Estilos para el modo oscuro */
 .tema-oscuro {
-    --color-fondo: #333; /* Casi negro */
-    --color-texto: #fff; /* Blanco */
+    --background-color: #333; /* Casi negro */
+    --color-primary: #fff; /* Blanco */
 }
 
 body {
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    background-color: var(--background-color);
+    color: var(--color-primary);
     transition: background-color 0.3s, color 0.3s; /* Suaviza la transición entre temas */
 }
 
