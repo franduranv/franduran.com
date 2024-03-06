@@ -1,0 +1,191 @@
+/* Estilo predeterminado (modo claro) */
+
+:root {
+    --color-primary: #333; /* Color primario para texto */
+    --color-link: #454545; /* Color para enlaces */
+    --background-color: #fff; /* Color de fondo general */
+    --font-size-icon: 24px; /* Tamaño de los íconos */
+}
+
+/* Estilos para el modo oscuro */
+.tema-oscuro {
+    --color-fondo: #333; /* Casi negro */
+    --color-texto: #fff; /* Blanco */
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición entre temas */
+}
+
+body {
+    font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 auto; /* Centra el contenido */
+    line-height: 1.6;
+    max-width: 922px;
+    padding: 0 10px; 
+    width: 100%;  
+}
+
+header, footer {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: center;
+    max-height: 80px;
+}
+
+header h1 {
+    font-size: 24px; /* Reduce el tamaño del título si es necesario */
+    margin-top: 0;
+    margin-bottom: 10px; /* Ajusta los márgenes para controlar el espacio alrededor del título */
+}
+
+header img {
+    max-width: 120px;
+}
+
+nav {
+    background: #333;
+    display: flex;
+    justify-content: center;
+}
+
+nav a, .nav-link, .nav-item {
+    color: #fff;
+    font-size: 14px; /* Ajusta el tamaño del texto de la navegación si es necesario */
+    padding: 5px 10px;
+    text-decoration: none;
+}
+    
+section {
+    padding: 20px;
+}
+
+
+
+h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    color: #454545;
+    text-decoration: none;
+}
+
+
+#bio, .content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay suficiente espacio */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bio-content {
+    width: 50%;
+    min-width: 400px;
+    text-align: justify;
+}
+
+.companies, .contact {
+    width: 400px;
+}
+
+.bio-image {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    
+}
+
+.base-image, .top-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 25px; /* Asegura que las esquinas redondeadas se apliquen a las imágenes también */
+}
+
+.base-image {
+    background-color: white;
+    opacity: 0.25;
+}
+
+.contact-icons a {
+    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño *//
+    border-radius: 4px; /* Esquinas redondeadas */
+    color: #000; /* Color del icono, cámbialo según tu diseño */
+    display: inline-block;
+    height: 20px;
+    line-height: 20px; /* Centra el icono verticalmente */
+    margin-right: 20px; /* Espaciado entre iconos */
+    text-align: center; /* Centra el icono horizontalmente */
+    width: 20px;
+    font-size: 20px; /* Tamaño del icono */
+}
+
+#contact .contact-icons a:first-child {
+    margin-left: 20px;
+}   
+#contact .contact-icons a:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último icono */
+}
+
+#contact p {
+    color: #000; /* Color del enlace */
+    text-decoration: none; /* Opcional: elimina el subrayado del enlace */
+    font-size: 16px; /* Tamaño del texto */
+    margin-left: 10px; /* Ajusta este valor según necesites */
+}
+
+#companies, #contact {
+    flex: 1;
+    flex-basis: 48%; /* Asigna una base para el tamaño de cada sección, dejando un poco de espacio entre ellas */
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+}
+
+
+/* Ajustes de responsividad */
+
+@media (max-width: 960px) {
+    #bio, .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+     .bio-image {
+        order: -1; /* Coloca la imagen de bio al principio */
+    }
+
+    /* Restablece cualquier margen, padding o alineación específica para móviles */
+    .contact-icons, #contact > p, .bio-content, #companies, #contact {
+        margin: 0;
+        padding: 0 10px; /* Añade padding para no pegar el contenido a los bordes */
+    }
+
+    #companies ul {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        margin-left: 20px; /* Alinea el h2 y ul con margen a la izquierda */
+        
+    }
+
+   #contact .contact-icons a {
+        margin-right: 10px; 
+    }
+
+    .contact-icons {
+        justify-content: flex-start;
+    }
