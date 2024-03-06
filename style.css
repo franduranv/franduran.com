@@ -155,6 +155,10 @@ ul li a {
     box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
 }
 
+ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
+    color: #555; /* Cambia el color para indicar interacción */
+    text-decoration: underline; /* Opcional: añade un subrayado al pasar el mouse o seleccionar */
+}
 
 /* Ajustes de responsividad */
 
