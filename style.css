@@ -213,10 +213,15 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
 
 /* Ajustes de responsividad */
 
-@media (max-width: 960px) {
+@media (max-width: 768px) {
     #bio, .content-wrapper {
         flex-direction: column;
         align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 
      .bio-image {
@@ -242,5 +247,8 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
     }
 
     .contact-icons {
-        justify-content: flex-start;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
