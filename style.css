@@ -13,6 +13,56 @@
     --color-primary: #fff; /* Blanco */
 }
 
+#cambiar-tema {
+    background-color: #fff; /* Fondo claro */
+    border: none; /* Sin bordes */
+    color: #333; /* Texto oscuro */
+    padding: 10px 20px; /* Ajusta el padding según necesites */
+    cursor: pointer; /* Cursor tipo mano */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
+    border-radius: 5px;
+}
+
+body, header, footer, nav {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-icons a {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos para el botón en el tema oscuro */
+.tema-oscuro #cambiar-tema {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+}
+
+.tema-oscuro header, .tema-oscuro footer, .tema-oscuro nav {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+}
+
+.tema-oscuro h2 {
+    color: #fff;
+}
+
+.tema-oscuro p, .tema-oscuro ul {
+    color: #fff; /* Blanco o casi blanco */
+}
+
+.tema-oscuro .contact-icons a {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Ícono blanco */
+}
+
+.tema-oscuro #contact p {
+    color: #fff; /* Cambia al color deseado para el modo oscuro */
+}
+
+.tema-oscuro #companies a, .tema-oscuro #contact a {
+    color: #fff; /* o el color que prefieras para el modo oscuro */
+}
+
 body {
     background-color: var(--background-color);
     color: var(--color-primary);
@@ -49,7 +99,7 @@ header img {
 }
 
 nav {
-    background: #333;
+    background: #fff;
     display: flex;
     justify-content: center;
 }
