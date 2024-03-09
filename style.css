@@ -125,6 +125,10 @@ ul {
     list-style-type: none;
 }
 
+ul li {
+    padding-top: 5px;
+}
+
 ul li a {
     color: #454545;
     text-decoration: none;
@@ -184,6 +188,7 @@ ul li a {
     text-align: center; /* Centra el icono horizontalmente */
     width: 20px;
     font-size: 20px; /* Tamaño del icono */
+    margin-top: 15px;
 }
 
 #contact .contact-icons a:first-child {
@@ -226,12 +231,13 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
 
      .bio-image {
         order: -1; /* Coloca la imagen de bio al principio */
+        margin-top: 20px;
     }
 
     /* Restablece cualquier margen, padding o alineación específica para móviles */
     .contact-icons, #contact > p, .bio-content, #companies, #contact {
         margin: 0;
-        padding: 0 10px; /* Añade padding para no pegar el contenido a los bordes */
+        padding: 0px 10px; /* Añade padding para no pegar el contenido a los bordes */
     }
 
     #companies ul {
@@ -242,7 +248,12 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         
     }
 
-   #contact .contact-icons a {
+    #contact {
+        margin-top: 30px;
+    }
+
+
+    #contact .contact-icons a {
         margin-right: 10px; 
     }
 
@@ -251,4 +262,10 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
+        
     }
+
+    footer {
+        padding-top: 60px;
+    }
+}
