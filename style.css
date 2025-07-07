@@ -1,128 +1,67 @@
-/* Estilo predeterminado (modo claro) */
-
+/* Variables de tema */
 :root {
-    --color-primary: #333; /* Color primario para texto */
-    --color-link: #454545; /* Color para enlaces */
-    --background-color: #fff; /* Color de fondo general */
-    --font-size-icon: 24px; /* Tamaño de los íconos */
+    --color-primary: #333;
+    --color-link: #454545;
+    --background-color: #fff;
+    --font-size-icon: 24px;
 }
 
-/* Estilos para el modo oscuro */
 .tema-oscuro {
-    --background-color: #333; /* Casi negro */
-    --color-primary: #fff; /* Blanco */
+    --background-color: #333;
+    --color-primary: #fff;
 }
 
-#cambiar-tema {
-    background-color: #fff; /* Fondo claro */
-    border: none; /* Sin bordes */
-    color: #333; /* Texto oscuro */
-    padding: 10px 20px; /* Ajusta el padding según necesites */
-    cursor: pointer; /* Cursor tipo mano */
-    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición de colores */
-    border-radius: 5px;
-}
-
-body, header, footer, nav {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.contact-icons a {
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Estilos para el botón en el tema oscuro */
-.tema-oscuro #cambiar-tema {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Texto claro */
-}
-
-.tema-oscuro header, .tema-oscuro footer, .tema-oscuro nav {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Texto claro */
-}
-
-.tema-oscuro h2 {
-    color: #fff;
-}
-
-.tema-oscuro p, .tema-oscuro ul {
-    color: #fff; /* Blanco o casi blanco */
-}
-
-.tema-oscuro .contact-icons a {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Ícono blanco */
-}
-
-.tema-oscuro #contact p {
-    color: #fff; /* Cambia al color deseado para el modo oscuro */
-}
-
-.tema-oscuro #companies a, .tema-oscuro #contact a {
-    color: #fff; /* o el color que prefieras para el modo oscuro */
-}
-
+/* General */
 body {
     background-color: var(--background-color);
     color: var(--color-primary);
-    transition: background-color 0.3s, color 0.3s; /* Suaviza la transición entre temas */
-}
-
-body {
     font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0 auto; /* Centra el contenido */
+    margin: 0 auto;
     line-height: 1.6;
     max-width: 922px;
-    padding: 0 10px; 
-    width: 100%;  
+    padding: 0 10px;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header, footer {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--color-primary);
     padding: 10px 20px;
     font-size: 14px;
     text-align: center;
-    max-height: 80px;
-    margin-bottom: 20px; /* Ajusta según necesites */
+    margin-bottom: 20px;
 }
 
 header h1 {
-    font-size: 24px; /* Reduce el tamaño del título si es necesario */
-    margin-top: 0;
-    margin-bottom: 10px; /* Ajusta los márgenes para controlar el espacio alrededor del título */
-}
-
-header img {
-    max-width: 120px;
+    font-size: 24px;
+    margin: 0 0 10px;
 }
 
 nav {
-    background: #fff;
+    background: var(--background-color);
     display: flex;
     justify-content: center;
 }
 
-nav a, .nav-link, .nav-item {
-    color: #fff;
-    font-size: 14px; /* Ajusta el tamaño del texto de la navegación si es necesario */
+nav a {
+    color: var(--color-primary);
+    font-size: 14px;
     padding: 5px 10px;
     text-decoration: none;
 }
-    
+
 section {
     padding: 20px;
 }
 
-
-
 h2 {
-    color: #333;
+    color: var(--color-primary);
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
 }
 
 ul li {
@@ -130,14 +69,30 @@ ul li {
 }
 
 ul li a {
-    color: #454545;
+    color: var(--color-link);
     text-decoration: none;
 }
 
+ul li a:hover, ul li a:focus {
+    color: #555;
+    text-decoration: underline;
+}
 
+/* Botón cambiar tema */
+#cambiar-tema {
+    background-color: var(--background-color);
+    border: none;
+    color: var(--color-primary);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+/* Bio y contenido */
 #bio, .content-wrapper {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea si no hay suficiente espacio */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
 }
@@ -148,19 +103,13 @@ ul li a {
     text-align: justify;
 }
 
-.companies, .contact {
-    width: 400px;
-}
-
 .bio-image {
     width: 400px;
     height: 400px;
-    position: relative;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin: 70px 0 20px;
     border-radius: 25px;
     overflow: hidden;
-    
+    position: relative;
 }
 
 .base-image, .top-image {
@@ -169,7 +118,7 @@ ul li a {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 25px; /* Asegura que las esquinas redondeadas se apliquen a las imágenes también */
+    border-radius: 25px;
 }
 
 .base-image {
@@ -177,47 +126,41 @@ ul li a {
     opacity: 0.25;
 }
 
+/* Contacto */
 .contact-icons a {
-    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño */
-    border-radius: 4px; /* Esquinas redondeadas */
-    color: #000; /* Color del icono, cámbialo según tu diseño */
+    background-color: var(--background-color);
+    border-radius: 4px;
+    color: var(--color-primary);
     display: inline-block;
     height: 20px;
-    line-height: 20px; /* Centra el icono verticalmente */
-    margin-right: 20px; /* Espaciado entre iconos */
-    text-align: center; /* Centra el icono horizontalmente */
+    line-height: 20px;
+    margin: 15px 20px 0 0;
+    text-align: center;
     width: 20px;
-    font-size: 20px; /* Tamaño del icono */
-    margin-top: 15px;
+    font-size: 20px;
 }
 
 #contact .contact-icons a:first-child {
     margin-left: 20px;
-}   
+}
+
 #contact .contact-icons a:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último icono */
+    margin-right: 0;
 }
 
 #contact p {
-    color: #000; /* Color del enlace */
-    text-decoration: none; /* Opcional: elimina el subrayado del enlace */
-    font-size: 16px; /* Tamaño del texto */
-    margin-left: 10px; /* Ajusta este valor según necesites */
+    color: var(--color-primary);
+    font-size: 16px;
+    margin-left: 10px;
 }
 
 #companies, #contact {
     flex: 1;
-    flex-basis: 48%; /* Asigna una base para el tamaño de cada sección, dejando un poco de espacio entre ellas */
-    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho total */
+    flex-basis: 48%;
+    box-sizing: border-box;
 }
 
-ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
-    color: #555; /* Cambia el color para indicar interacción */
-    text-decoration: underline; /* Opcional: añade un subrayado al pasar el mouse o seleccionar */
-}
-
-/* Ajustes de responsividad */
-
+/* Responsividad */
 @media (max-width: 768px) {
     #bio, .content-wrapper {
         flex-direction: column;
@@ -229,32 +172,27 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         height: auto;
     }
 
-     .bio-image {
-        order: -1; /* Coloca la imagen de bio al principio */
+    .bio-image {
+        order: -1;
         margin-top: 20px;
     }
 
-    /* Restablece cualquier margen, padding o alineación específica para móviles */
     .contact-icons, #contact > p, .bio-content, #companies, #contact {
         margin: 0;
-        padding: 0px 10px; /* Añade padding para no pegar el contenido a los bordes */
+        padding: 0 10px;
     }
 
     #companies ul {
-        margin: 0;
-        padding: 0;
+        margin: 0 0 0 20px;
         text-align: left;
-        margin-left: 20px; /* Alinea el h2 y ul con margen a la izquierda */
-        
     }
 
     #contact {
         margin-top: 30px;
     }
 
-
     #contact .contact-icons a {
-        margin-right: 10px; 
+        margin-right: 10px;
     }
 
     .contact-icons {
@@ -262,7 +200,6 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        
     }
 
     footer {
