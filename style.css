@@ -180,14 +180,13 @@ ul li a {
 }
 
 .bio-image {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     position: relative;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-top: 0 auto;
     border-radius: 25px;
     overflow: hidden;
-    
+    padding: 0 15px;
 }
 
 .base-image, .top-image {
@@ -259,8 +258,19 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
      .bio-image {
         order: -1; /* Coloca la imagen de bio al principio */
         margin-top: 20px;
+        max-width: 90%;
     }
 
+    .content-wrapper {
+        padding: 0 15px; /* Asegura que el contenido no toque los bordes */
+        text-align: center; /* Centra el texto */
+    }
+
+    .bio-content {
+        margin: 0 auto; /* Centra el contenido */
+        padding: 10px; /* Añade espacio interno */
+    }
+    
     /* Restablece cualquier margen, padding o alineación específica para móviles */
     .contact-icons, #contact > p, .bio-content, #companies, #contact {
         margin: 0;
