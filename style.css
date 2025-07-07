@@ -204,7 +204,7 @@ ul li a {
 }
 
 .contact-icons a {
-    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño *//
+    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño */
     border-radius: 4px; /* Esquinas redondeadas */
     color: #000; /* Color del icono, cámbialo según tu diseño */
     display: inline-block;
@@ -270,7 +270,7 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         margin: 0 auto; /* Centra el contenido */
         padding: 10px; /* Añade espacio interno */
     }
-    
+
     /* Restablece cualquier margen, padding o alineación específica para móviles */
     .contact-icons, #contact > p, .bio-content, #companies, #contact {
         margin: 0;
