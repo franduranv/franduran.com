@@ -38,6 +38,10 @@ header h1 {
     margin: 0 0 10px;
 }
 
+header img {
+    max-width: 120px;
+}
+
 nav {
     background: var(--background-color);
     display: flex;
