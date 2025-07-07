@@ -23,6 +23,33 @@
     border-radius: 5px;
 }
 
+/* Asegúrate de que el contenido no exceda el ancho del viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Aplica box-sizing a todos los elementos */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Ajusta las imágenes y otros elementos para que no excedan el ancho */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Asegúrate de que los contenedores sean responsivos */
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 15px; /* Añade un padding para evitar que el contenido toque los bordes */
+}
+
 body, header, footer, nav {
     transition: background-color 0.3s, color 0.3s;
 }
