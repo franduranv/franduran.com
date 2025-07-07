@@ -165,11 +165,10 @@ ul li a:hover, ul li a:focus {
     #bio, .content-wrapper {
         flex-direction: column;
         align-items: center;
-        max-width: 90%;
     }
 
     img {
-        max-width: 90%;
+        max-width: 100%;
         height: auto;
     }
 
