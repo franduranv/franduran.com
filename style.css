@@ -23,33 +23,6 @@
     border-radius: 5px;
 }
 
-/* Asegúrate de que el contenido no exceda el ancho del viewport */
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-/* Aplica box-sizing a todos los elementos */
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-/* Ajusta las imágenes y otros elementos para que no excedan el ancho */
-img, video, iframe {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Asegúrate de que los contenedores sean responsivos */
-.container {
-    max-width: 100%;
-    overflow-x: hidden;
-    padding: 0 15px; /* Añade un padding para evitar que el contenido toque los bordes */
-}
-
 body, header, footer, nav {
     transition: background-color 0.3s, color 0.3s;
 }
@@ -94,11 +67,14 @@ body {
     background-color: var(--background-color);
     color: var(--color-primary);
     transition: background-color 0.3s, color 0.3s; /* Suaviza la transición entre temas */
+}
+
+body {
     font-family: 'Helvetica', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto; /* Centra el contenido */
     line-height: 1.6;
-    max-width: 1200p;
-    padding: 0 20px;
+    max-width: 922px;
+    padding: 0 10px; 
     width: 100%;  
 }
 
@@ -166,22 +142,9 @@ ul li a {
     align-items: flex-start;
 }
 
-.content-wrapper {
-    width: 100%;
-    max-width: 922px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 .bio-content {
-    width: 100%;
-    min-width: 600%;
-    padding: 20px;
-    margin: 0 auto;
+    width: 50%;
+    min-width: 400px;
     text-align: justify;
 }
 
@@ -190,20 +153,22 @@ ul li a {
 }
 
 .bio-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+    width: 400px;
+    height: 400px;
     position: relative;
-    margin-top: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
     border-radius: 25px;
     overflow: hidden;
-    padding: 0;
+    
 }
 
 .base-image, .top-image {
     width: 100%;
-    height: auto%;
-    position: relative;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     border-radius: 25px; /* Asegura que las esquinas redondeadas se apliquen a las imágenes también */
 }
 
@@ -213,7 +178,7 @@ ul li a {
 }
 
 .contact-icons a {
-    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño */
+    background-color: #fff; /* Fondo de los iconos, cámbialo según tu diseño *//
     border-radius: 4px; /* Esquinas redondeadas */
     color: #000; /* Color del icono, cámbialo según tu diseño */
     display: inline-block;
@@ -254,10 +219,6 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
 /* Ajustes de responsividad */
 
 @media (max-width: 768px) {
-    body {
-        padding: 0 15px;
-    }
-
     #bio, .content-wrapper {
         flex-direction: column;
         align-items: center;
@@ -270,19 +231,7 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
 
      .bio-image {
         order: -1; /* Coloca la imagen de bio al principio */
-        margin: 20px auto; /* Centra la imagen */
-        max-width: 90%;
-    }
-
-    .content-wrapper {
-        padding: 10px; 
-        text-align: center; /* Centra el texto */
-    }
-
-    .bio-content {
-        margin: 0 auto; /* Centra el contenido */
-        padding: 15px; /* Añade espacio interno */
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        margin-top: 20px;
     }
 
     /* Restablece cualquier margen, padding o alineación específica para móviles */
@@ -291,12 +240,6 @@ ul li a:hover, ul li a:focus, .contact-icons a:hover, .contact-icons a:focus {
         padding: 0px 10px; /* Añade padding para no pegar el contenido a los bordes */
     }
 
-    #companies, #contact {
-        width: 100%;
-        padding: 15px;
-        margin: 10px 0;
-    }
-    
     #companies ul {
         margin: 0;
         padding: 0;
