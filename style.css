@@ -217,6 +217,11 @@ ul li a:hover, ul li a:focus {
         gap: 10px;
     }
 
+    header, footer {
+        padding: 10px 0;
+        align-items: center;
+    }
+    
     footer {
         padding-top: 60px;
     }
