@@ -280,7 +280,7 @@ ul li a:hover, ul li a:focus {
 
     .bio-image {
         order: -1;
-        margin-top: 20px;
+        margin-top: opx 20px;
     }
 
     .contact-icons, #contact > p, .bio-content, #companies, #contact {
