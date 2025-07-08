@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonTema = document.getElementById('cambiar-tema');
-    const logo = document.querySelector('header img'); // Asegúrate de que el selector coincida
-    const corazon = document.querySelector('footer p'); // Asegúrate de que el selector coincida
+    const logo = document.querySelector('header img'); 
+    const corazon = document.querySelector('footer p'); 
 
     botonTema.addEventListener('click', () => {
         document.body.classList.toggle('tema-oscuro');

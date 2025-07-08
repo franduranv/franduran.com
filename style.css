@@ -1,3 +1,97 @@
+
+/* Variables de tema:
+    Define colores y tamaños base para el tema claro y oscuro. 
+    Se utilizan variables CSS para facilitar cambios globales. */
+
+/* General:
+    Estilos generales para el cuerpo, encabezados, pie de página, 
+    navegación y secciones. Incluye tipografía, colores, márgenes 
+    y transiciones para una experiencia visual consistente. */
+
+/* header, footer:
+    Estilos para el encabezado y pie de página, incluyendo colores, 
+    tamaños de fuente, alineación y márgenes. */
+
+/* header h1:
+    Define el tamaño y márgenes del título principal en el encabezado. */
+
+/* header img:
+    Limita el tamaño máximo de las imágenes en el encabezado. */
+
+/* nav:
+    Estilos para la barra de navegación, incluyendo alineación y 
+    distribución de enlaces. */
+
+/* nav a:
+    Estilos para los enlaces de navegación, incluyendo colores, 
+    tamaños de fuente y espaciado. */
+
+/* section:
+    Define el espaciado interno de las secciones. */
+
+/* h2:
+    Aplica color a los encabezados de nivel 2. */
+
+/* ul:
+    Elimina el estilo de lista predeterminado y el espaciado interno. */
+
+/* ul li:
+    Define el espaciado superior de los elementos de lista. */
+
+/* ul li a:
+    Estilos para los enlaces dentro de listas, incluyendo colores 
+    y comportamiento al pasar el cursor. */
+
+/* ul li a:hover, ul li a:focus:
+    Cambia el color y subraya los enlaces al pasar el cursor o 
+    enfocarlos. */
+
+/* Botón cambiar tema:
+    Estilos para el botón de cambio de tema, incluyendo colores, 
+    transiciones, bordes y espaciado. */
+
+/* Bio y contenido:
+    Estilos para la sección de biografía y contenido, incluyendo 
+    diseño flexible, alineación y espaciado. */
+
+/* .bio-content:
+    Define el ancho mínimo y alineación del texto en la biografía. */
+
+/* .bio-image:
+    Estilos para la imagen de biografía, incluyendo tamaño, bordes 
+    redondeados y posición. */
+
+/* .base-image, .top-image:
+    Estilos para imágenes superpuestas en la biografía, incluyendo 
+    opacidad y bordes redondeados. */
+
+/* Contacto:
+    Estilos para los íconos de contacto y texto, incluyendo colores, 
+    tamaños, alineación y espaciado. */
+
+/* #contact .contact-icons a:first-child:
+    Ajusta el margen izquierdo del primer ícono de contacto. */
+
+/* #contact .contact-icons a:last-child:
+    Ajusta el margen derecho del último ícono de contacto. */
+
+/* #contact p:
+    Estilos para los párrafos en la sección de contacto, incluyendo 
+    color, tamaño de fuente y márgenes. */
+
+/* #companies, #contact:
+    Define el diseño flexible y espaciado para las secciones de 
+    empresas y contacto. */
+
+/* Responsividad:
+    Ajustes para pantallas pequeñas (máximo 768px), incluyendo 
+    diseño flexible, alineación, tamaños de imagen y espaciado. */
+
+/* @media (max-width: 768px):
+    Reorganiza elementos para dispositivos móviles, ajusta márgenes, 
+    tamaños y alineación para mejorar la experiencia en pantallas 
+    pequeñas. */
+
 /* Variables de tema */
 :root {
     --color-primary: #333;
@@ -9,6 +103,7 @@
 .tema-oscuro {
     --background-color: #333;
     --color-primary: #fff;
+    --color-link: #a8a8a8;
 }
 
 /* General */
