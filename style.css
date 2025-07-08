@@ -131,9 +131,8 @@ header, footer {
 header h1 {
     font-size: 24px;
     margin: 0 0 10px;
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    font-size: 1em;
+    font-family: 'Helvetica', serif;
+    font-size: 1.3em;
 }
 
 header img {

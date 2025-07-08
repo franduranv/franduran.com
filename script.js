@@ -3,28 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.querySelector('header img'); 
     const corazon = document.querySelector('footer p'); 
 
-    botonTema.addEventListener('click', () => {
-        document.body.classList.toggle('tema-oscuro');
-        
-        // Opcional: Guardar la preferencia del tema en localStorage
-        if(document.body.classList.contains('tema-oscuro')) {
-            botonTema.textContent = 'Light Mode';
-            logo.src = 'assets/FD_Logotipo_White.png'; // Cambia al logotipo blanco
-            corazon.innerHTML = 'Handcrafted with 🤍 by franduran'; // Cambia el emoji a corazón blanco
-            localStorage.setItem('tema', 'oscuro');
-        } else {
-            botonTema.textContent = 'Dark Mode';
-            logo.src = 'assets/FD_Logotipo.png'; // Cambia de vuelta al logotipo original
-            corazon.innerHTML = 'Handcrafted with 🖤 by franduran'; // Cambia de vuelta al emoji de corazón negro
-            localStorage.setItem('tema', 'claro');
-        }
-    });
+    // Función para cambiar el tema
+    const cambiarTema = (oscuro) => {
+        document.body.classList.toggle('tema-oscuro', oscuro);
+        botonTema.textContent = oscuro ? 'Light Mode' : 'Dark Mode';
+        logo.src = oscuro ? 'assets/FD_Logotipo_White.png' : 'assets/FD_Logotipo.png';
+        corazon.innerHTML = `Handcrafted with ${oscuro ? '🤍' : '🖤'} by franduran`;
+    };
 
-    // Opcional: Cargar la preferencia del tema desde localStorage
-    if(localStorage.getItem('tema') === 'oscuro') {
-        document.body.classList.add('tema-oscuro');
-        botonTema.textContent = 'Light Mode';
-        logo.src = 'assets/FD_Logotipo_White.png'; // Asegúrate de cambiar al logo en blanco
-        corazon.innerHTML = 'Handcrafted with 🤍 by franduran'; // Emoji de corazón blanco
-    }
+    // Detectar preferencia del sistema
+    const prefiereModoOscuro = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Aplicar tema inicial según sistema
+    cambiarTema(prefiereModoOscuro.matches);
+
+    // Escuchar cambios del sistema
+    prefiereModoOscuro.addEventListener('change', (e) => cambiarTema(e.matches));
+
+    // Permitir cambios manuales con el botón
+    botonTema.addEventListener('click', () => {
+        const estaOscuro = document.body.classList.contains('tema-oscuro');
+        cambiarTema(!estaOscuro);
+    });
 });
