@@ -263,6 +263,11 @@ ul li a:hover, ul li a:focus {
 
 /* Responsividad */
 @media (max-width: 768px) {
+    html, body {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
     #bio, .content-wrapper {
         flex-direction: column;
         align-items: center;
@@ -290,6 +295,7 @@ ul li a:hover, ul li a:focus {
 
     #contact {
         margin-top: 30px;
+        text-align: center;
     }
 
     #contact .contact-icons a {
