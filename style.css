@@ -197,7 +197,8 @@ ul li a:hover, ul li a:focus {
     .bio-content {
         width: 100%;
         min-width: auto;
-        text-align: center;
+        max-width: 300px;
+        text-align: justify;
         padding: 0 20px;
         box-sizing: border-box;
     }
