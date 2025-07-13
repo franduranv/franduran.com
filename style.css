@@ -260,3 +260,13 @@ ul li a:hover, ul li a:focus {
         box-sizing: border-box;
     }
 }
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bio-content, .bio-image, #companies, #contact {
+    animation: fadeInUp 0.8s ease-out;
+}
