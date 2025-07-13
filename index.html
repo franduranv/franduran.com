@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fran Durán - Architect, Technologist & Entrepreneur. Former CEO of ICON University, founder of ZXY Ventures, and SingularityU León Chapter leader.">
+    <meta name="keywords" content="Fran Durán, entrepreneur, technology, architecture, Mexico, ZXY Ventures, ICON University">
+    <meta name="author" content="Fran Durán">
+    <meta property="og:title" content="Fran Durán - Personal Website">
+    <meta property="og:description" content="Architect, technologist, and entrepreneur">
+    <meta property="og:image" content="assets/FD_Profile_Square.jpeg">
+    <meta property="og:url" content="https://franduran.com">
     <title>Fran Duran - Personal Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/FD_Profile_Square.jpeg">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="assets/FD_Logotipo.png" as="image">
 
 </head>
 <body>
     <header>
-        <img src="assets/FD_Logotipo.png" alt="Logotipo de Fran Duran">
+        <img src="assets/FD_Logotipo.png" alt="Logotipo de Fran Duran" loading="eager">
     </header>
     <nav>
         <!-- Aquí se puede añadir enlaces a las diferentes secciones de la página -->
         <button id="cambiar-tema"> Dark Mode </button>
     </nav>
-    <div class="content-wrapper">
-        <section id="bio">
+    <main class="content-wrapper">
+        <article id="bio">
             <div class="bio-content">
                 <h2>About</h2>
                 <p>Fran Durán is an architect, technologist, and entrepreneur with a former education in architecture and business from Tec de Monterrey, complemented by international studies in Germany, China, and the USA. His commitment to continuous learning and technological innovation is evident in his pursuit of tech education.</p>
@@ -25,11 +37,11 @@
                 <p>Recently he launched ZXY Ventures, a venture studio and capital firm aimed to support the growth of startups in Mexico and Latin America. His past roles as an entrepreneur, CEO, board member, speaker, and writer has markedly influenced entrepreneurial success, technology advancement, and the support of a new generation of entrepreneurs in developing sustainable, impactful solutions.</p>
             </div>
             <div class="bio-image">
-                <img src="assets/FD_Profile_Square.jpeg" alt="Transparencia de Fotografía de Fran Durán" class="base-image">
-                <img src="assets/FD_Profile_Square_NB.png" alt="Fotografía de Fran Durán" class="top-image">
+                <img src="assets/FD_Profile_Square.jpeg" alt="Transparencia de Fotografía de Fran Durán" class="base-image" loading="lazy">
+                <img src="assets/FD_Profile_Square_NB.png" alt="Fotografía de Fran Durán" class="top-image" loading="lazy">
             </div>
-        </section>
-        <section id="companies">
+        </article>
+        <aside id="companies">
             <div class="companies">
                 <h2>Companies</h2>
                 <ul>
@@ -37,8 +49,8 @@
                     <li><a href="https://icon.edu.mx" target="_blank">ICON University</a></li>
                 </ul>
             </div>    
-        </section>        
-        <section id="contact">
+        </aside>        
+        <address id="contact">
             <div class="contact">
                 <h2>Contact</h2>
                 <p class="connect-text"> Want to connect?</p>
@@ -53,11 +65,12 @@
                     <a href="https://www.facebook.com/franduranv" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-        </section>
-    </div>    
+        </address>
+    </main>
     <footer>
+        <p>For inquiries: <a href="mailto:hey@franduran.com">hey@franduran.com</a></p>
         <p>Handcrafted with 🖤 by franduran</p>
-        <p>All rights reserved ©2024</p>
+        <p>All rights reserved ©2025</p>
     </footer>
     <script src="script.js"></script>
 </body>

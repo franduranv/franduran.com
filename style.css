@@ -14,9 +14,14 @@
     --color-link: #a8a8a8;
 }
 
-/* Transición global para todos los elementos que usan variables CSS */
+/* Transición global más específica */
 * {
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Excluir elementos que no necesitan transición */
+img, svg, .bio-image img {
+    transition: none;
 }
 
 /* General */
@@ -273,4 +278,21 @@ ul li a:hover, ul li a:focus {
 
 .bio-content, .bio-image, #companies, #contact {
     animation: fadeInUp 0.8s ease-out;
+}
+
+/* Footer email link styling */
+footer a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus {
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Footer spacing */
+footer p:first-child {
+    margin-top: 30px;
+    margin-bottom: 45px;
 }
