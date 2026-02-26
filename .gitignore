@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# OS files
+Thumbs.db
+
+# Image optimization intermediates
+*.tmp
