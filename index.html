@@ -20,18 +20,35 @@
     <link rel="preload" href="assets/desert-bg.jpg" as="image">
 </head>
 <body>
-    <header>
-        <img src="assets/FD_Logotipo.png" alt="Fran Durán" loading="eager">
-        <button id="cambiar-tema" aria-label="Toggle dark mode"></button>
-    </header>
+    <!-- Hero with desert background -->
     <section id="hero">
         <div class="hero-overlay"></div>
+        <nav class="hero-nav">
+            <div class="nav-inner">
+                <img src="assets/FD_Logotipo.png" alt="Fran Durán" class="hero-logo" loading="eager">
+                <button id="cambiar-tema" aria-label="Toggle dark mode"></button>
+            </div>
+        </nav>
         <div class="hero-content">
             <h1 id="hero-tagline">Architect. Building things that outlive their creator.</h1>
         </div>
     </section>
+
+    <!-- Sticky nav (appears on scroll) -->
+    <header id="sticky-header">
+        <div class="nav-inner">
+            <img src="assets/FD_Logotipo.png" alt="Fran Durán" class="sticky-logo" loading="eager">
+            <button id="cambiar-tema-sticky" aria-label="Toggle dark mode"></button>
+        </div>
+    </header>
+
     <main class="content-wrapper">
         <article id="bio">
+            <!-- Image LEFT, text RIGHT -->
+            <div class="bio-image">
+                <img src="assets/FD_Profile_SF.jpg" alt="Fran Durán" class="base-image" loading="lazy">
+                <img src="assets/FD_Profile_SF_NB.png" alt="Fran Durán" class="top-image" loading="lazy">
+            </div>
             <div class="bio-content">
                 <h2>About</h2>
                 <p>Some people build for today. Fran builds for what comes after.</p>
@@ -39,22 +56,17 @@
                 <p>That conviction drove a decade leading ICON University, where he redesigned not the campus but the very model of what a university could be. It took him to Singularity University in Silicon Valley, where exponential thinking stopped being a concept and became a method. And it brought him to found ZXY Ventures — not as a company, but as a living system built to outlast its own creator.</p>
                 <p>Today, ZXY operates as an agentic venture studio: a small team of AI agents building real products for real problems in Latin America. Each one designed to run without him. Each one a small proof that the right architecture doesn't need you to keep showing up.</p>
             </div>
-            <div class="bio-image">
-                <img src="assets/FD_Profile_SF.jpg" alt="Fran Durán" class="base-image" loading="lazy">
-                <img src="assets/FD_Profile_SF_NB.png" alt="Fran Durán" class="top-image" loading="lazy">
-            </div>
         </article>
-        <aside id="companies">
-            <div class="companies">
+
+        <div class="lower-grid">
+            <aside id="companies">
                 <h2>Now building</h2>
                 <ul>
                     <li><a href="https://zxy.vc" target="_blank">ZXY Ventures ↗</a></li>
                     <li><a href="https://github.com/franduranv" target="_blank">GitHub ↗</a></li>
                 </ul>
-            </div>    
-        </aside>        
-        <address id="contact">
-            <div class="contact">
+            </aside>
+            <address id="contact">
                 <h2>Contact</h2>
                 <p class="connect-text">Want to connect?</p>
                 <div class="contact-icons">
@@ -67,14 +79,18 @@
                     <a href="https://www.instagram.com/franduran/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.facebook.com/franduranv" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                 </div>
-            </div>
-        </address>
+            </address>
+        </div>
     </main>
+
     <footer>
-        <p>For inquiries: <a href="mailto:hey@franduran.com">hey@franduran.com</a></p>
-        <p>Handcrafted with 🖤 by franduran</p>
-        <p>All rights reserved ©2026</p>
+        <div class="footer-inner">
+            <span>hey@franduran.com · <a href="mailto:hey@franduran.com">write me</a></span>
+            <span>Handcrafted with 🖤 by franduran</span>
+            <span>©2026 Fran Durán</span>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
