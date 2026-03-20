@@ -47,7 +47,7 @@ body {
     flex-direction: column;
     background-image: url('assets/desert-bg.jpg');
     background-size: cover;
-    background-position: center 65%;
+    background-position: center 50%;
 }
 
 .hero-overlay {
@@ -278,3 +278,36 @@ footer {
     }
 }
 /* updated: 20260319214425 */
+
+/* ── Language toggle ── */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#lang-toggle, #lang-toggle-sticky {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+    color: rgba(255,255,255,0.75);
+    font-size: 0.68em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    padding: 3px 7px;
+    cursor: pointer;
+    font-family: var(--font);
+    transition: opacity 0.2s, border-color 0.2s !important;
+    line-height: 1.4;
+}
+#lang-toggle:hover, #lang-toggle-sticky:hover {
+    opacity: 1;
+    border-color: rgba(255,255,255,0.8);
+}
+#lang-toggle-sticky, #lang-toggle-sticky {
+    color: var(--color-secondary);
+    border-color: rgba(128,128,128,0.3);
+}
+#lang-toggle-sticky:hover {
+    border-color: var(--color-secondary);
+}

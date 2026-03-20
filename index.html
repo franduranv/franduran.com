@@ -20,55 +20,58 @@
     <link rel="preload" href="assets/desert-bg.jpg" as="image">
 </head>
 <body>
-    <!-- Hero with desert background -->
     <section id="hero">
         <div class="hero-overlay"></div>
         <nav class="hero-nav">
             <div class="nav-inner">
                 <img src="assets/FD_Logotipo.png" alt="Fran Durán" class="hero-logo" loading="eager">
-                <button id="cambiar-tema" aria-label="Toggle dark mode"></button>
+                <div class="nav-controls">
+                    <button id="lang-toggle" aria-label="Toggle language">EN</button>
+                    <button id="cambiar-tema" aria-label="Toggle dark mode"></button>
+                </div>
             </div>
         </nav>
         <div class="hero-content">
-            <h1 id="hero-tagline">Architect. Building things that outlive their creator.</h1>
+            <h1 id="hero-tagline" data-en="Architect. Building things that outlive their creator." data-es="Arquitecto. Construyendo cosas que sobreviven a su creador.">Architect. Building things that outlive their creator.</h1>
         </div>
     </section>
 
-    <!-- Sticky nav (appears on scroll) -->
     <header id="sticky-header">
         <div class="nav-inner">
             <img src="assets/FD_Logotipo.png" alt="Fran Durán" class="sticky-logo" loading="eager">
-            <button id="cambiar-tema-sticky" aria-label="Toggle dark mode"></button>
+            <div class="nav-controls">
+                <button id="lang-toggle-sticky" aria-label="Toggle language">EN</button>
+                <button id="cambiar-tema-sticky" aria-label="Toggle dark mode"></button>
+            </div>
         </div>
     </header>
 
     <main class="content-wrapper">
         <article id="bio">
-            <!-- Image LEFT, text RIGHT -->
             <div class="bio-image">
                 <img src="assets/FD_Profile_SF.jpg" alt="Fran Durán" class="base-image" loading="lazy">
                 <img src="assets/FD_Profile_SF_NB.png" alt="Fran Durán" class="top-image" loading="lazy">
             </div>
             <div class="bio-content">
-                <h2>About</h2>
-                <p>Some people build for today. Fran builds for what comes after.</p>
-                <p>Trained as an architect, he learned early that the most powerful designs aren't made of concrete — they're made of systems, ideas, and the cultures that carry them forward. A building has a lifespan. The right idea doesn't.</p>
-                <p>That conviction drove a decade leading ICON University, where he redesigned not the campus but the very model of what a university could be. It took him to Singularity University in Silicon Valley, where exponential thinking stopped being a concept and became a method. And it brought him to found ZXY Ventures — not as a company, but as a living system built to outlast its own creator.</p>
-                <p>Today, ZXY operates as an agentic venture studio: a small team of AI agents building real products for real problems in Latin America. Each one designed to run without him. Each one a small proof that the right architecture doesn't need you to keep showing up.</p>
+                <h2 data-en="About" data-es="Acerca de">About</h2>
+                <p data-en="Some people build for today. Fran builds for what comes after." data-es="Algunos construyen para hoy. Fran construye para lo que viene después.">Some people build for today. Fran builds for what comes after.</p>
+                <p data-en="Trained as an architect, he learned early that the most powerful designs aren't made of concrete — they're made of systems, ideas, and the cultures that carry them forward. A building has a lifespan. The right idea doesn't." data-es="Formado como arquitecto, aprendió desde temprano que los diseños más poderosos no están hechos de concreto — están hechos de sistemas, ideas y las culturas que los llevan hacia adelante. Un edificio tiene vida útil. La idea correcta, no.">Trained as an architect, he learned early that the most powerful designs aren't made of concrete — they're made of systems, ideas, and the cultures that carry them forward. A building has a lifespan. The right idea doesn't.</p>
+                <p data-en="That conviction drove a decade leading ICON University, where he redesigned not the campus but the very model of what a university could be. It took him to Singularity University in Silicon Valley, where exponential thinking stopped being a concept and became a method. And it brought him to found ZXY Ventures — not as a company, but as a living system built to outlast its own creator." data-es="Esa convicción lo llevó a dirigir ICON University durante una década, donde rediseñó no el campus sino el modelo mismo de lo que una universidad podía ser. Lo llevó a Singularity University en Silicon Valley, donde el pensamiento exponencial dejó de ser un concepto y se convirtió en método. Y lo trajo a fundar ZXY Ventures — no como una empresa, sino como un sistema vivo construido para sobrevivir a su propio creador.">That conviction drove a decade leading ICON University, where he redesigned not the campus but the very model of what a university could be. It took him to Singularity University in Silicon Valley, where exponential thinking stopped being a concept and became a method. And it brought him to found ZXY Ventures — not as a company, but as a living system built to outlast its own creator.</p>
+                <p data-en="Today, ZXY operates as an agentic venture studio: a small team of AI agents building real products for real problems in Latin America. Each one designed to run without him. Each one a small proof that the right architecture doesn't need you to keep showing up." data-es="Hoy, ZXY opera como un venture studio agéntico: un equipo reducido de agentes de IA construyendo productos reales para problemas reales en América Latina. Cada uno diseñado para funcionar sin él. Cada uno una pequeña prueba de que la arquitectura correcta no necesita que sigas apareciendo.">Today, ZXY operates as an agentic venture studio: a small team of AI agents building real products for real problems in Latin America. Each one designed to run without him. Each one a small proof that the right architecture doesn't need you to keep showing up.</p>
             </div>
         </article>
 
         <div class="lower-grid">
             <aside id="companies">
-                <h2>Now building</h2>
+                <h2 data-en="Now building" data-es="Construyendo ahora">Now building</h2>
                 <ul>
                     <li><a href="https://zxy.vc" target="_blank">ZXY Ventures ↗</a></li>
                     <li><a href="https://github.com/franduranv" target="_blank">GitHub ↗</a></li>
                 </ul>
             </aside>
             <address id="contact">
-                <h2>Contact</h2>
-                <p class="connect-text">Want to connect?</p>
+                <h2 data-en="Contact" data-es="Contacto">Contact</h2>
+                <p class="connect-text" data-en="Want to connect?" data-es="¿Quieres conectar?">Want to connect?</p>
                 <div class="contact-icons">
                     <a href="https://usemotion.com/meet/franduran/zoom?d=30" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-video"></i></a>
                     <a href="https://www.linkedin.com/in/franduran/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
@@ -85,8 +88,8 @@
 
     <footer>
         <div class="footer-inner">
-            <span>hey@franduran.com · <a href="mailto:hey@franduran.com">write me</a></span>
-            <span>Handcrafted with 🖤 by franduran</span>
+            <span>hey@franduran.com · <a href="mailto:hey@franduran.com" data-en="write me" data-es="escríbeme">write me</a></span>
+            <span id="footer-craft">Handcrafted with 🖤 by franduran</span>
             <span>©2026 Fran Durán</span>
         </div>
     </footer>
