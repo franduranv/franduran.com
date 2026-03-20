@@ -283,31 +283,29 @@ footer {
 .nav-controls {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 #lang-toggle, #lang-toggle-sticky {
     background: none;
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 3px;
-    color: rgba(255,255,255,0.75);
-    font-size: 0.68em;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    padding: 3px 7px;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.65em;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    padding: 0;
     cursor: pointer;
     font-family: var(--font);
-    transition: opacity 0.2s, border-color 0.2s !important;
-    line-height: 1.4;
+    transition: opacity 0.2s !important;
+    line-height: 1;
 }
 #lang-toggle:hover, #lang-toggle-sticky:hover {
-    opacity: 1;
-    border-color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9);
 }
-#lang-toggle-sticky, #lang-toggle-sticky {
+#lang-toggle-sticky {
     color: var(--color-secondary);
-    border-color: rgba(128,128,128,0.3);
+    opacity: 0.6;
 }
 #lang-toggle-sticky:hover {
-    border-color: var(--color-secondary);
+    opacity: 1;
 }
