@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const applyTheme = (dark) => {
         document.body.classList.toggle('tema-oscuro', dark);
         setThemeIcons(dark);
-        if (footerCraft) footerCraft.innerHTML = `Handcrafted with ${dark ? '🤍' : '🖤'} by franduran`;
+        if (footerCraft) footerCraft.innerHTML = `Handcrafted with <svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='currentColor' stroke='none' style='vertical-align:-1px;opacity:0.7'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg> by franduran`;
         localStorage.setItem('theme', dark ? 'dark' : 'light');
     };
 
