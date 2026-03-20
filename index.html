@@ -17,19 +17,20 @@
     <link rel="apple-touch-icon" href="assets/FD_Profile_SF.jpg">
     <link rel="preload" href="style.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="assets/FD_Logotipo.png" as="image">
+    <link rel="preload" href="assets/desert-bg.jpg" as="image">
 </head>
 <body>
     <header>
         <img src="assets/FD_Logotipo.png" alt="Fran Durán" loading="eager">
+        <button id="cambiar-tema" aria-label="Toggle dark mode"></button>
     </header>
-    <nav>
-        <button id="cambiar-tema" aria-label="Toggle dark mode">🌙</button>
-    </nav>
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-tagline">Architect. Building things that outlive their creator.</h1>
+        </div>
+    </section>
     <main class="content-wrapper">
-        <section id="hero">
-            <h1>Architect. Building things that outlive their creator.</h1>
-        </section>
         <article id="bio">
             <div class="bio-content">
                 <h2>About</h2>
